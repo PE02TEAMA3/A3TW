@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score
 import time
 import pandas as pd
 
-tree = ET.parse('HY202103_D08_(0,2)_LION1_DCM_LMZC.xml')
+tree = ET.parse('C:/Users/user/PycharmProjects/A3TW_YS/dat/D07/20190715_190855/HY202103_D07_(0,0)_LION1_DCM_LMZC.xml')
 root = tree.getroot()
 
 def spfl(a):    # spfl 함수 정의
@@ -146,5 +146,7 @@ for k in range(len(wvl)-1):
     # 빛의 세기가 최소일 때 파장
     print(f'at {wvl[k][np.argmin(itst[k] - f1(wvl[k]))]}nm')
 plt.tight_layout()
-plt.savefig("graph.png",dpi = 300, bbox_inches = 'tight')
+
+plt.savefig("C:/Users/user/PycharmProjects/A3TW_YS/results/jpgs/graph",dpi = 300, bbox_inches = 'tight')
+
 plt.show()

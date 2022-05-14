@@ -42,4 +42,4 @@ data.append(values)
 df = pd.DataFrame(data, columns=columns).set_index('Lot')
 print(df)
 
-df.to_csv('df1.csv', mode = 'w')
+df.to_csv('C:/Users/user/PycharmProjects/A3TW_YS/results/csvdf1.csv', mode = 'w')
