@@ -1,6 +1,3 @@
-
-
-#
 # import xml.etree.ElementTree as ET
 # import matplotlib.pyplot as plt
 # import numpy as np
@@ -30,3 +27,4 @@
 # for data in root.iter('Current'):
 #     crt = list(map(abs, spfl(data)))  #'Current'안에 있는 값을 spfl함수를 사용하고, 절댓값을 사용해 리스트 안에 넣어
 #     i = np.array(crt)
+
