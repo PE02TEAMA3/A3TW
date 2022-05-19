@@ -3,6 +3,7 @@ import os
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+
 #wafer리스트
 wafer = []
 #data리스트
@@ -37,7 +38,7 @@ print(wafer)
 for i in range(len(wafer)):
     search(wafer[i],date)
 print(date)
-print("--"*30+"프로그램 시작"+"--"*30)
+print("--"*10+"프로그램 시작"+"--"*10)
 print("찾고자 하는 요소들의 이름을 입력하세요.")
 print("모든 요소를 찾고 싶다면 all 입력")
 batch = input("Batch: ")
@@ -69,15 +70,17 @@ a = "*"
 for i in range(len(cmps)):
     if not cmps[i] == 'all':
         a += cmps[i] + "*"
-print(a)
+print(f"a: {a}")
 
-# date디렉토리 하위의 파일들 중 ''문자가 포함된 파일들을 찾아 dlst에 append
+# date디렉토리 하위의 파일들 중 입력받은 문자가 포함된 파일들을 찾아 dlst에 append
 for i in range(len(date)):
     ph = Path(date[i]).resolve()
     for ret in ph.glob(a) :
      dlst.append(ret)
 
-print(dlst)
+for i in range(len(dlst)):
+    print(dlst[i])
+
 print(len(dlst))
 def spfl(a):    # spfl 함수 정의
     sp = a.text.split(',')  # ,를 기준으로 나누고 값 가져오기
@@ -90,3 +93,10 @@ for i in range(len(dlst)):
     for data in root.iter('Voltage'):
         vlt = spfl(data)  # 'Voltage'안에 있는 값을 spfl함수를 사용해 v에 저장
     print(vlt)
+
+
+# Batch = []
+# wafer = ['D06','D07']
+# xy_coord = []
+# maskset = []
+# device = ['LMZ']
