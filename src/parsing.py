@@ -1,14 +1,9 @@
 import xml.etree.ElementTree as ET
-import matplotlib.pyplot as plt
 import numpy as np
-from numpy import exp
-from lmfit import Model
-from sklearn.metrics import r2_score
-import time
-import pandas as pd
 
-tree = ET.parse('C:/Users/user/PycharmProjects/A3TW_YS/dat/D07/20190715_190855/HY202103_D07_(0,0)_LION1_DCM_LMZC.xml')
-root = tree.getroot()
+def parse():
+    tree = ET.parse()
+    root = tree.getroot()
 
 def spfl(a):    # spfl 함수 정의
     sp = a.text.split(',')  # ,를 기준으로 나누고 값 가져오기
@@ -38,15 +33,3 @@ for data in root.iter('IL'):
 lgds = []
 for data in root.iter("WavelengthSweep"):
     lgds.append(data.get("DCBias"))
-
-plt.subplot(2, 3, 1)
-for n in range(len(wvl)):
-    plt.title("Transmission spectra-as measured")
-    plt.xlabel("Wavelength [nm]")
-    plt.ylabel("Measured transmission [dB]")
-    plt.rc("legend", fontsize=7)
-    if n == 6:
-        plt.plot(wvl[6], itst[6], label = 'DCBias = REF')
-    else:
-        plt.plot(wvl[n], itst[n], label = f'DCBias = {lgds[n]}V')
-    plt.legend(loc = 'best', ncol = 3)
