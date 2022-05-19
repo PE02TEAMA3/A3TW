@@ -1,14 +1,28 @@
-# import sys
-# sys.path.append('[C:/Users/user/PycharmProjects/A3TW_YS/src/filter.py]')
-# from src import filter
+import sys
+sys.path.append('[C://src]')
+from src import filter
 
-batch = []
-wfer = ["D07","D08"]
-drow = ["(0,0)","(0,1)"]
-dcol = []
-mset = []
-tsite = []
+Lot_id = []
+Wafer_id = []
+xy_coord = ["(0,0)","(0,-1)"]
+Mask_set = []
+device_name =['LMZ']
+Opt_savefig = True
+Opt_showfig = True
 
-for i in range(len(wfer)):
-    for t in range(len(drow)):
-      print(f"{wfer[i]}+{drow[t]}")
+a = [Lot_id, Wafer_id,xy_coord, Mask_set, device_name]
+b = []
+
+def num(c):
+    if len(c) == 0:
+        b.append(1)
+    else:
+        b.append(len(c))
+
+for c in range(len(a)):
+    num(a[c])
+
+# for a in range(len[b]):
+#     for a in range():
+
+
