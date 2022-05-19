@@ -22,3 +22,22 @@ Opt_savefig = True
 
 '''그래프를 보고 싶다면 True, 보고 싶지 않다면 False를 입력하세요.'''
 Opt_showfig = True
+
+a = [Lot_id, Wafer_id,xy_coord, Mask_set, device_name]
+
+def num(c):
+    if len(c) == 0:
+        c.append("_")
+
+for c in range(len(a)):
+    num(a[c])
+    print(a[c])
+
+fname = []
+for fst in range(len(Lot_id)):
+    for scd in range(len(Wafer_id)):
+        for trd in range(len(xy_coord)):
+            for fth in range(len(Mask_set)):
+                for fith in range(len(device_name)):
+                    fname.append(f"*{Lot_id[fst]}*{Wafer_id[scd]}*{xy_coord[trd]}*{Mask_set[fth]}*{device_name[fith]}")
+print(fname)
