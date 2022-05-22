@@ -1,21 +1,18 @@
 import xml.etree.ElementTree as ET
-import matplotlib.pyplot as plt
 import numpy as np
-from numpy import exp
-from lmfit import Model
-from sklearn.metrics import r2_score
-import time
-import pandas as pd
+
 
 
 
 # tree = ET.parse('C:/Users/user/PycharmProjects/A3TW_YS/dat/D07/20190715_190855/HY202103_D07_(0,0)_LION1_DCM_LMZC.xml')
 # root = tree.getroot()
 
+
 def spfl(a):    # spfl 함수 정의
     sp = a.text.split(',')  # ,를 기준으로 나누고 값 가져오기
     fl = list(map(float, sp))   # 가져온 값을 실수로 바꾸고 리스트에 넣기
     return fl   # fl 반환
+
 
 
 def v(a):
@@ -72,3 +69,4 @@ def lgds(a):
 #     else:
 #         plt.plot(wvl[n], itst[n], label = f'DCBias = {lgds[n]}V')
 #     plt.legend(loc = 'best', ncol = 3)
+

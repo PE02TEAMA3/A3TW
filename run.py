@@ -1,8 +1,10 @@
 import sys
 import os
+
 # from src import filter
 # import filter
 from src import filter, parsing, graph, fitting
+
 
 '''찾고 싶은 파일의 Lot_id를 입력하세요.'''
 Lot_id = ['HY202103']
@@ -25,6 +27,7 @@ Opt_savefig = True
 '''그래프를 보고 싶다면 True, 보고 싶지 않다면 False를 입력하세요.'''
 Opt_showfig = True
 
+
 filter.cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name)
 # print(str(filter.dlst[0]))
 for i in range(len(filter.dlst)):
@@ -43,6 +46,7 @@ for i in range(len(filter.dlst)):
 # print(c)
 # print(parsing.ps(c))
 # (parsing.ps(c))[1]
+
 
 
 
