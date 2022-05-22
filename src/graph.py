@@ -13,6 +13,7 @@ from pathlib import Path
 h = ((os.path.dirname(os.path.abspath(__file__))).replace("\\","/")).replace("src","results/jpgs")
 # hi = 'C:\\Users\\user\\PycharmProjects\\A3TW_YS\\dat\\D08\\20190526_082853\\HY202103_D08_(0,2)_LION1_DCM_LMZO.xml'
 
+
 def figname(a):
     a = a.replace("\\","/")
     b = a.split("/")
