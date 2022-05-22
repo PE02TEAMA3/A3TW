@@ -35,33 +35,12 @@ h = ((os.path.dirname(os.path.abspath(__file__))).replace("\\","/")).replace("sr
 
 # dat 디렉토리의 하위 디렉토리를 찾아 wafer리스트에 append
 search(h,wafer)
-# search('/dat',b)
 
 # wafer리스트 각 요소들의 하위 디렉터리를 찾아 date디렉토리에 append
 for i in range(len(wafer)):
     search(wafer[i],date)
 
-# date디렉토리 하위의 파일들 중 ''문자가 포함된 파일들을 찾아 dlst에 append
 
-
-#
-# ahfd = ['*HY202103*D07*(0,0)*LION1*LMZ', '*HY202103*D07*(0,-1)*LION1*LMZ']
-# gh = []
-# print(glb('*HY202103*D07*(0,0)*LION1*LMZ',gh))
-# for i in range(len(ahfd)):
-#     print(glb(ahfd[i]))
-
-# def spfl(a):    # spfl 함수 정의
-#     sp = a.text.split(',')  # ,를 기준으로 나누고 값 가져오기
-#     fl = list(map(float, sp))   # 가져온 값을 실수로 바꾸고 리스트에 넣기
-#     return fl   # fl 반환
-#
-# for i in range(len(dlst)):
-#     tree = ET.parse(dlst[i])
-#     root = tree.getroot()
-#     for data in root.iter('Voltage'):
-#         vlt = spfl(data)  # 'Voltage'안에 있는 값을 spfl함수를 사용해 v에 저장
-#     print(vlt)
 fname = []
 dlst = []
 # def cmp(a,b,c,d,e):
