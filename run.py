@@ -25,7 +25,7 @@ device_name =[]
 Opt_savefig = True
 
 '''그래프를 보고 싶다면 True, 보고 싶지 않다면 False를 입력하세요.'''
-Opt_showfig = True
+Opt_showfig = False
 
 
 filter.cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name)
