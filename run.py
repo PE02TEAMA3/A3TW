@@ -1,12 +1,14 @@
 import sys
 import os
-from src import filter
+# from src import filter
+# import filter
+from src import filter, 연습, parsing, graph, fitting
 
 '''찾고 싶은 파일의 Lot_id를 입력하세요.'''
 Lot_id = ['HY202103']
 
 '''찾고 싶은 파일의 Wafer_id를 입력하세요.'''
-Wafer_id = ['D07']
+Wafer_id = ['D07','D08']
 
 '''찾고 싶은 파일의 행렬을 입력하세요. ex) [0,0]'''
 xy_coord = ['(0,0)']
@@ -15,7 +17,7 @@ xy_coord = ['(0,0)']
 Mask_set = ['LION1']
 
 '''찾고 싶은 파일의 devive_name을 입력하세요.'''
-device_name =['LMZ']
+device_name =[]
 
 '''그래프를 저장하고 싶다면 True, 저장하고 싶지 않다면 False를 입력하세요.'''
 Opt_savefig = True
@@ -23,21 +25,23 @@ Opt_savefig = True
 '''그래프를 보고 싶다면 True, 보고 싶지 않다면 False를 입력하세요.'''
 Opt_showfig = True
 
-a = [Lot_id, Wafer_id,xy_coord, Mask_set, device_name]
+filter.cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name)
+print(filter.dlst)
+for i in range(len(filter.dlst)):
+    a = parsing.v(filter.dlst[i])
+    b = parsing.i(filter.dlst[i])
+    c = parsing.wvl(filter.dlst[i])
+    d = parsing.itst(filter.dlst[i])
+    e = parsing.lgds(filter.dlst[i])
+    graph.grph(a,b,c,d,e)
 
-def num(c):
-    if len(c) == 0:
-        c.append("_")
+# print(a.pas())
+# print(parsing.i)
+# print(graph.v(filter.dlst))
+# print(c)
+# print(parsing.ps(c))
+# (parsing.ps(c))[1]
 
-for c in range(len(a)):
-    num(a[c])
-    print(a[c])
 
-fname = []
-for fst in range(len(Lot_id)):
-    for scd in range(len(Wafer_id)):
-        for trd in range(len(xy_coord)):
-            for fth in range(len(Mask_set)):
-                for fith in range(len(device_name)):
-                    fname.append(f"*{Lot_id[fst]}*{Wafer_id[scd]}*{xy_coord[trd]}*{Mask_set[fth]}*{device_name[fith]}")
-print(fname)
+
+
