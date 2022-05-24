@@ -42,6 +42,7 @@ class grp():
         self.show = show
         self.save = save
         self.figname = figname
+
     def grph(self):
         plt.figure(figsize = (12, 8))
         plt.subplot(2, 3, 4)
@@ -117,13 +118,10 @@ class grp():
             plt.plot(self.wvl[6], f1(self.wvl[6]), 'r--', label = f'{b} th R^2:{round(r2_score(self.itst[6], f1(self.wvl[6])),4)}')
             plt.rc("legend", fontsize=8)
             # print(f'I-IL R Squared {b}th : {r2_score((itst[6]),f1(wvl[6]))}') # 피팅 제곱의 값 즉, 1에 가까울 수록 정확하다.
-
         plt.xlabel('Wavelength[nm]')
         plt.ylabel('Transmissions[dB]')
         plt.title('Transmission spectra - fitted')
         plt.legend(loc='best')
-
-
         plt.subplot(2, 3, 3)
         for k in range(len(self.wvl)-1):
             plt.title("Fitting Function")
@@ -143,8 +141,10 @@ class grp():
         plt.tight_layout()
         if self.show == True:
             plt.show()
+
         if self.save == True:
-            plt.savefig(self.figname, dpi=300, bbox_inches='tight')
+            plt.savefig(self.figname,dpi=300, bbox_inches='tight')
+
 
     def ref_rsq(self):
         dp1 = np.polyfit(self.wvl[6], self.itst[6], 4)
