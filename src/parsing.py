@@ -43,5 +43,3 @@ def lgds(a):
     for data in root.iter("WavelengthSweep"):
         lgds.append(data.get("DCBias"))
     return lgds
-
-# 진짜 파싱
