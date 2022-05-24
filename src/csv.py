@@ -20,7 +20,6 @@ class csv():
         self.b = b
         tree = g.ET.parse(self.a)
         root = tree.getroot()
-
         columns = ['Lot', 'Wafer', 'Mask', 'TestSite', 'Name', 'Date', 'Script Owner', 'Operator', 'Row', 'Column', 'ErrorFlag', 'Error description', 'Analysis Wavelength', 'Rsq of Ref. spectrum (Nth)', 'Max transmission of Ref. spec. (dB)', 'Rsq of Left IV','Rsq of right IV', 'I at -1V [A]', 'I at 1V[A]']
         # 'Script ID', 'Script Version'
         data = []
