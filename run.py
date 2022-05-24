@@ -29,7 +29,6 @@ Opt_showfig = False
 
 
 filter.cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name)
-# print((filter.dlst))
 
 
 for i in range(len(filter.dlst)):
