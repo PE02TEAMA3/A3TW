@@ -38,8 +38,8 @@ search(h,wafer)
 
 # wafer리스트 각 요소들의 하위 디렉터리를 찾아 date디렉토리에 append
 for i in range(len(wafer)):
-    search(wafer[i],date)
-
+    if not "datkeep" in wafer[i]:
+        search(wafer[i],date)
 
 fname = []
 dlst = []
