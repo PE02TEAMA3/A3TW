@@ -67,6 +67,7 @@ class cmp():
                 ph = Path(date[i]).resolve()
                 for ret in ph.glob(fname[t]):
                     dlst.append(ret)
+
         # return dlst
 
 

@@ -1,8 +1,8 @@
-import graph as g
 import pandas as pd
 import sys
 import os
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
 h = ((os.path.dirname(os.path.abspath(__file__))).replace("\\","/")).replace("src","results/csvs")
 
@@ -15,10 +15,10 @@ def csvname(a):
     return e
 
 class csv():
-    def __init__(self,a,b):
+    def __init__(self,a,b,g,p):
         self.a = a
         self.b = b
-        tree = g.ET.parse(self.a)
+        tree = ET.parse(self.a)
         root = tree.getroot()
         columns = ['Lot', 'Wafer', 'Mask', 'TestSite', 'Name', 'Date', 'Script Owner', 'Operator', 'Row', 'Column', 'ErrorFlag', 'Error description', 'Analysis Wavelength', 'Rsq of Ref. spectrum (Nth)', 'Max transmission of Ref. spec. (dB)', 'Rsq of Left IV','Rsq of right IV', 'I at -1V [A]', 'I at 1V[A]']
         # 'Script ID', 'Script Version'
@@ -44,14 +44,14 @@ class csv():
         # wl = root[6][0][0][1][0][1]
         # values.append(wl.text)
         values.append(root.find(".//DesignParameter[@Name='Design wavelength']").text)
-        values.append(round(g.ref_rsq, 4))  # ref rsq
-        values.append(g.ref_max) # ref max
-        values.append(g.IV_left_rsq) # rsq left
-        values.append(g.IV_right_rsq) # rsq right
-        index1 = g.vlt.index(-1)    # voltage -1V 인덱스 구하기
-        index2 = g.vlt.index(1)     # voltage -V 인덱스 구하기
-        values.append(g.crt1[index1]) # I at -1V
-        values.append(g.crt1[index2]) # I at 1V
+        values.append(round(g.ref_rsq(), 4))  # ref rsq
+        values.append(g.ref_max()) # ref max
+        values.append(g.IV_left_rsq()) # rsq left
+        values.append(g.IV_right_rsq()) # rsq right
+        index1 = p.vlt(self.a).index(-1)    # voltage -1V 인덱스 구하기
+        index2 = p.vlt(self.a).index(1)     # voltage -V 인덱스 구하기
+        values.append(p.crt1(self.a)[index1]) # I at -1V
+        values.append(p.crt1(self.a)[index2]) # I at 1V
         # print(values)
 
         data.append(values)
