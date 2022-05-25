@@ -1,4 +1,5 @@
-dat/*
-.idea/*
-results/*
-__pycache__/*
+dat/
+.idea/
+results/
+__pycache__/
+!.gitkeep

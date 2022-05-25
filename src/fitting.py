@@ -7,8 +7,10 @@
 # import time
 # import pandas as pd
 
-def eq(x, a, b, c, d, e):
-    return a * (x**4) + b * (x**3) + c * (x**2) + d * x + e
-
 def IV(x, Is, q, n, k):
     return Is * (exp((q * x) / (n * k)) - 1)
+
+def IVfitting(x, q, w, alp, xi = [], yi = []):
+    polyfiti = np.polyfit(xi, yi, 12)
+    fiti = np.poly1d(polyfiti)
+    return abs(q*(np.exp(x/w)-1))+alp+fiti(x)
