@@ -1,3 +1,4 @@
-dat/
-.idea/
-results/
+dat/*
+.idea/*
+results/*
+__pycache__/*
