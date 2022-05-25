@@ -7,7 +7,7 @@ def num(c):
     if len(c) == 0:
         c.append("_")
 
-print("안녕하세요")
+# print("안녕하세요")
 # print(cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name))
 
 #wafer리스트
