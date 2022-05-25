@@ -1,8 +1,4 @@
-import sys
-import os
 from src import csv_maker, filter, graph, parsing, get_start
-import warnings
-
 
 '''찾고 싶은 파일의 Lot_id를 입력하세요.'''
 Lot_id = ['HY202103']
@@ -31,19 +27,6 @@ get_start.run2u(filter,parsing,graph,csv_maker,Opt_showfig,Opt_savefig)
 
 
 
-# print(str(filter.dlst[0]))
-# for i in range(len(filter.dlst)):
-#     warnings.filterwarnings('ignore')
-#     a = parsing.v(filter.dlst[i])
-#     b = parsing.i(filter.dlst[i])
-#     c = parsing.wvl(filter.dlst[i])
-#     d = parsing.itst(filter.dlst[i])
-#     e = parsing.lgds(filter.dlst[i])
-#     f = graph.figname(str(filter.dlst[i]))
-#     print(filter.dlst[i])
-#     t = graph.grp(a,b,c,d,e,Opt_showfig,Opt_savefig,f)
-#     t.grph()
-#     cs = csv_maker.csv(filter.dlst[i], csv_maker.csvname(str(filter.dlst[i])), t, parsing)
 
 
 
