@@ -2,4 +2,4 @@ dat/
 .idea/
 results/
 __pycache__/
-!.gitkeep
+!*.gitkeep
