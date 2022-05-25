@@ -10,10 +10,10 @@ from src import filter, parsing, graph, fitting, csv
 Lot_id = ['HY202103']
 
 '''찾고 싶은 파일의 Wafer_id를 입력하세요.'''
-Wafer_id = ["D08"]
+Wafer_id = []
 
 '''찾고 싶은 파일의 행렬을 입력하세요. ex) [0,0]'''
-xy_coord = ["(0,0)"]
+xy_coord = ["(2,-1)"]
 
 '''찾고 싶은 파일의 maskset을 입력하세요.'''
 Mask_set = ['LION1']
@@ -31,17 +31,22 @@ Opt_showfig = False
 filter.cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name)
 # print((filter.dlst))
 
-
 for i in range(len(filter.dlst)):
     a = parsing.v(filter.dlst[i])
     b = parsing.i(filter.dlst[i])
     c = parsing.wvl(filter.dlst[i])
     d = parsing.itst(filter.dlst[i])
     e = parsing.lgds(filter.dlst[i])
+    # s = str(filter.dlst[i])
     f = graph.figname(str(filter.dlst[i]))
-    t = graph.grp(a,b,c,d,e,Opt_showfig,Opt_savefig,f)
-    cs = csv.csv(filter.dlst[i],csv.csvname(str(filter.dlst[i])),t,parsing)
-
+    graph.grph(a,b,c,d,e,Opt_showfig,Opt_savefig,f)
+    csv.csv(filter.dlst[i],csv.csvname(str(filter.dlst[i])))
+# print(a.pas())
+# print(parsing.i)
+# print(graph.v(filter.dlst))
+# print(c)
+# print(parsing.ps(c))
+# (parsing.ps(c))[1]
 
 
 
