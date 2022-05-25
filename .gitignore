@@ -1,5 +1,8 @@
 dat/
+!dat/.gitkeep
 .idea/
 results/
+!csvs/.gitkeep
+!jpgs/.gitkeep
 __pycache__/
-!.gitkeep
+
