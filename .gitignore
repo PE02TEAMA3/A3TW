@@ -1,6 +1,6 @@
-dat/D**
+dat/**
 .idea/
-results/csvs/.csv
-results/jpgs/.jpg
+results/csvs/*.csv
+results/jpgs/*.jpg
 __pycache__/
 #올리기
