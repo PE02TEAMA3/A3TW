@@ -1,4 +1,4 @@
 dat/*
 .idea/*
 results/*
-__pycache__/*
+--pycache__/*
