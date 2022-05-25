@@ -1,7 +1,7 @@
-dat/
 !dat/.gitkeep
+!results/csvs/.gitkeep
+!results/jpgs/.gitkeep
+dat/
 .idea/
 results/
-!csvs/.gitkeep
-!jpgs/.gitkeep
 __pycache__/
