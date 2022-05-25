@@ -1,7 +1,6 @@
-!dat/.gitkeep
-!results/csvs/.gitkeep
-!results/jpgs/.gitkeep
-dat/
+dat/D**
+dat
 .idea/
-results/
+results/csvs/.csv
+results/jpgs/.jpg
 __pycache__/
