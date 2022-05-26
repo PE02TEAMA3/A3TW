@@ -1,16 +1,17 @@
 from src import csv_maker, filter, graph, parsing, get_start
 
+
 '''찾고 싶은 파일의 Lot_id를 입력하세요.'''
-Lot_id = ['HY202103']
+Lot_id = ['']
 
 '''찾고 싶은 파일의 Wafer_id를 입력하세요.'''
-Wafer_id = ['D07','D08']
+Wafer_id = ['']
 
-'''찾고 싶은 파일의 행렬을 입력하세요. ex) [0,0]'''
-xy_coord = ['(0,2)']
+'''찾고 싶은 파일의 행렬을 입력하세요. ex) (0,0),'''
+xy_coord = ['']
 
 '''찾고 싶은 파일의 maskset을 입력하세요.'''
-Mask_set = ['LION1']
+Mask_set = ['']
 
 '''찾고 싶은 파일의 devive_name을 입력하세요.'''
 device_name =[]
