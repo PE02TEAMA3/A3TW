@@ -1,11 +1,16 @@
-import sys
+
 import os
-import xml.etree.ElementTree as ET
+
 from pathlib import Path
 
 def num(c):
+    for i in range(len(c)):
+        if c[0] == '':
+            del c[0]
     if len(c) == 0:
         c.append("_")
+
+
 
 
 
