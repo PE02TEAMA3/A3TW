@@ -43,6 +43,7 @@ class grp():
         self.save = save
         self.figname = figname
     def grph(self):
+
         plt.figure(figsize = (12, 8))
         plt.subplot(2, 3, 4)
         plt.plot(self.v, self.i, 'o', label = 'I-V curve')
@@ -61,20 +62,20 @@ class grp():
         i1 = self.i[:10]
         i2 = self.i[9:]
 
-        start_time1 = time.time()
+        # start_time1 = time.time()
         lmodel = Model(eq)
         params1 = lmodel.make_params(a=1, b=1, c=1, d=1, e=1)
         result1 = lmodel.fit(i1, params1, x = v1)
         plt.plot(v1, result1.best_fit, '--', label = 'Fit-L')
-        end_time1 = time.time()
+        # end_time1 = time.time()
         # print(f'left fitting time : {end_time1 - start_time1}')
 
-        start_time2 = time.time()
+        # start_time2 = time.time()
         rmodel = Model(IV)
         params2 = rmodel.make_params(Is=1, q=1, n=1, k=1)
         result2 = rmodel.fit(i2, params2, x = v2)
         plt.plot(v2, result2.best_fit, '--', label = 'Fit-R')
-        end_time2 = time.time()
+        # end_time2 = time.time()
         # print(f'right fitting time : {end_time2 - start_time2}')
 
         plt.title("IV analysis")
@@ -175,6 +176,7 @@ class grp():
         result2 = rmodel.fit(i2, params2, x=v2)
         IV_right_rsq = r2_score(i2, result2.best_fit)
         return IV_right_rsq
+
 
 
 
