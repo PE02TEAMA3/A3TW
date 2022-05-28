@@ -33,7 +33,7 @@ class csv():
         if rsq.IV_left_rsq(p,fit,a) <= 0.96:
             Error_code.append('2')
             Error_name.append('Rsq.left.Error')
-        if rsq.IV_left_rsq(p,fit,a) <= 0.96:
+        if rsq.IV_right_rsq(p,fit,a) <= 0.96:
             Error_code.append('3')
             Error_name.append('Rsq.right.Error')
         # if g.IV_rsq() <= 0.996:
