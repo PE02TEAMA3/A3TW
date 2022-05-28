@@ -54,15 +54,15 @@ class grp():
         plt.subplot(2,3,5)
         plt.plot(self.v, self.i, 'o', label = 'I-V curve')
 
-        v1 = self.v[:10]
-        v2 = self.v[9:]
+        v1 = self.v[:9]
+        v2 = self.v[7:]
 
-        i1 = self.i[:10]
-        i2 = self.i[9:]
+        i1 = self.i[:9]
+        i2 = self.i[7:]
 
         # start_time1 = time.time()
         lmodel = Model(self.fitting.eq)
-        params1 = lmodel.make_params(a=1, b=1, c=1, d=1, e=1)
+        params1 = lmodel.make_params(a=1, b=1, c=1, d=1,e=1)
         result1 = lmodel.fit(i1, params1, x = v1)
         plt.plot(v1, result1.best_fit, '--', label = 'Fit-L')
         # # end_time1 = time.time()
