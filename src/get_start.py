@@ -1,10 +1,9 @@
 import warnings
 import time as t
-def run2u(a,b,c,d,f,g):
-
-    print('안녕하세요')
+def run2u(a,b,c,d,f,g,fit,rsq):
+    print('Hello')
     if len(a.dlst) == 0:
-        print("입력 조건에 부합하는 data가 존재하지 않습니다.")
+        print("No file exists matching the input values.")
     else:
         data = []
         for i in range(len(a.dlst)):
@@ -16,11 +15,11 @@ def run2u(a,b,c,d,f,g):
             ee = b.lgds(a.dlst[i])
             ff = c.figname(str(a.dlst[i]))
             print(a.dlst[i])
-            t = c.grp(aa, bb, cc, dd, ee, f, g, ff)
+            t = c.grp(aa, bb, cc, dd, ee, f, g, ff,fit)
             t.grph()
-            d.csv(a.dlst[i], t, b,data)
+            d.csv(a.dlst[i], t, b,data,rsq,fit)
         d.all_csv(data)
-        print('분석이 완료되었습니다. 이용해 주셔서 감사합니다.')
+        print(f'Analysis of {len(a.dlst)} files completed successfully. \nThank you.')
 
 # print(str(filter.dlst[0]))
 # for i in range(len(filter.dlst)):
