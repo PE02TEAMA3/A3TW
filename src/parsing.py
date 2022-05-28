@@ -31,7 +31,6 @@ def crt1(a):
 def i(a):
     root = ET.parse(a).getroot()
     for data in root.iter('Current'):
-        crt1 = spfl(data)
         crt = list(map(abs, spfl(data)))  # 'Current'안에 있는 값을 spfl함수를 사용하고, 절댓값을 사용해 리스트 안에 넣어
         i = np.array(crt)
     return i
