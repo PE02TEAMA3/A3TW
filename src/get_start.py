@@ -30,7 +30,7 @@ class err():
             self.a
             self.b
         except Exception as e:
-            print(f"ERROR:{e}! <Please check the entered value again.>")
+            print(f"Error type:{e}! <Please check the entered values again.>")
 
 def runtime(a,b):
     print(f'Run time: {b-a}[s]')
