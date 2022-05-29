@@ -8,8 +8,6 @@ def ref_rsq(p,d):
     ref_rsq = r2_score(p.itst(d)[6], f1(p.wvl(d)[6]))
     return ref_rsq
 
-
-
 def IV_left_rsq(a,b,d):
     v1 = a.v(d)[:10]
     i1 = a.i(d)[:10]

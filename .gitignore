@@ -3,4 +3,3 @@ dat/**
 results/csvs/*.csv
 results/jpgs/*.jpg
 __pycache__/
-#올리기

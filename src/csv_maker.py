@@ -25,6 +25,7 @@ class csv():
         values.append(ModulatorSite.attrib['Operator'])
         values.append(TestSiteInfo['DieRow'])
         values.append(TestSiteInfo['DieColumn'])
+
         Error_code = []
         Error_name = []
         if round(rsq.ref_rsq(p,a),4) <= 0.96 :
@@ -36,9 +37,6 @@ class csv():
         if rsq.IV_right_rsq(p,fit,a) <= 0.96:
             Error_code.append('3')
             Error_name.append('Rsq.right.Error')
-        # if g.IV_rsq() <= 0.996:
-        #     Error_code.append('2')
-        #     Error_name.append('IV_rsq.Error')
 
         if len(Error_code) == 0 :
             Error_code.append('0')

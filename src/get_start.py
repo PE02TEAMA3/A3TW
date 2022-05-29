@@ -1,5 +1,6 @@
 import warnings
 import time as t
+
 def run2u(a,b,c,d,f,g,fit,rsq):
     print('Hello')
     if len(a.dlst) == 0:
@@ -20,21 +21,6 @@ def run2u(a,b,c,d,f,g,fit,rsq):
             d.csv(a.dlst[i], t, b,data,rsq,fit)
         d.all_csv(data)
         print(f'Analysis of {len(a.dlst)} files completed successfully. \nThank you.')
-
-# print(str(filter.dlst[0]))
-# for i in range(len(filter.dlst)):
-#     warnings.filterwarnings('ignore')
-#     a = parsing.v(filter.dlst[i])
-#     b = parsing.i(filter.dlst[i])
-#     c = parsing.wvl(filter.dlst[i])
-#     d = parsing.itst(filter.dlst[i])
-#     e = parsing.lgds(filter.dlst[i])
-#     f = graph.figname(str(filter.dlst[i]))
-#     print(filter.dlst[i])
-#     t = graph.grp(a,b,c,d,e,Opt_showfig,Opt_savefig,f)
-#     t.grph()
-#     cs = csv_maker.csv(filter.dlst[i], csv_maker.csvname(str(filter.dlst[i])), t, parsing)
-
 
 class err():
     def __init__(self,a,b):

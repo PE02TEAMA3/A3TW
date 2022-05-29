@@ -1,18 +1,12 @@
 import os
 from pathlib import Path
+
 def num(c):
     for i in range(len(c)):
         if c[0] == '':
             del c[0]
     if len(c) == 0:
         c.append("_")
-
-#wafer리스트
-wafer = []
-#data리스트
-date = []
-#data리스트
-
 
 #디렉토리 이름을 넣으면 그 하위 디렉토리 경로를 a 리스트에 append
 def search(dirname,a):
@@ -29,6 +23,11 @@ def findfile(name, path):
 
 #현재 파일의 경로를 찾아 dat경로로 위치 변경
 h = ((os.path.dirname(os.path.abspath(__file__))).replace("\\","/")).replace("src","dat")
+
+#wafer리스트
+wafer = []
+#data리스트
+date = []
 
 # dat 디렉토리의 하위 디렉토리를 찾아 wafer리스트에 append
 search(h,wafer)
@@ -65,4 +64,3 @@ class cmp():
                 ph = Path(date[i]).resolve()
                 for ret in ph.glob(fname[t]):
                     dlst.append(ret)
-
