@@ -18,10 +18,10 @@ Mask_set = []
 device_name =[]
 
 '''Enter 'True' if you want to save the graph, 'False' otherwise'''
-Opt_savefig = True
+Opt_savefig =
 
 '''Enter 'True' if you want to see the graph, 'False' otherwise'''
-Opt_showfig = False
+Opt_showfig =
 
 a = filter.cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name)
 b = get_start.run2u(filter,parsing,graph,csv_maker,Opt_showfig,Opt_savefig,fitting,rsq)
