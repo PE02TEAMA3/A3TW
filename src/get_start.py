@@ -16,7 +16,7 @@ def run2u(a,b,c,d,f,g,fit,rsq):
             ee = b.lgds(a.dlst[i])
             ff = c.figname(str(a.dlst[i]))
             print(a.dlst[i])
-            t = c.grp(aa, bb, cc, dd, ee, f, g, ff,fit)
+            t = c.grp(aa, bb, cc, dd, ee, f, g, ff, fit)
             t.grph()
             d.csv(a.dlst[i], t, b,data,rsq,fit)
         d.all_csv(data)

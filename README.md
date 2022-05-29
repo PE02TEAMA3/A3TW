@@ -21,7 +21,7 @@ Install numpy. Numpy is Python package that deals with numerical data. It is mai
 Install matplotlib.pyplot. Used to vissualize data understanding prior to data analysis, or to visualize results after data analysis.
 Install lmfit. Lmfit provides a high-level interface to non-linear optimization and curve fitting problems for Python. https://lmfit.github.io/lmfit-py/
 
-If you want install all prerequisite, Write 'pip install -r requirements.txt'
+If you want install all prerequisite, Write 'pip install -r requirements.txt'.
 
 ## Environment
 ***
@@ -32,24 +32,25 @@ If you want install all prerequisite, Write 'pip install -r requirements.txt'
 ## Files
 ***
 * ### src
-  * #### csv_maker.py - 
-  * #### filter.py
-  * #### fitting.py
-  * #### get_start.py
-  * #### graph.py
-  * #### parsing.py
-  * #### rsq.py
-* #### .gitignore
-* #### Run.py
+  * #### csv_maker.py - The analysis result is made into a csv file, and the contents of the error occurrence according to the rsq value are included.
+  * #### filter.py - Find the file in the dat file by combining the entered file names.
+  * #### fitting.py - It is about a function for data fitting.
+  * #### get_start.py - It deals with the contents of what you will see when you run the run file.
+  * #### graph.py - The analysis results (basic, fitting, rsq) are graphically shown using matplotlib.
+  * #### parsing.py - It is a file that parsing the elements necessary to draw a graph from the data.
+  * #### rsq.py - It is a file that calculates the r square values of IV and ref fitting functions.
+* #### .gitignore - We used the .gitignore file to prevent uploading files that the project does not need to manage or release.
+* #### Run.py - It is the code that executes the projects, and it receives several options to execute the src folder.
 
 ## Usage
 ***
-1. you need
-2. open the run.py file
-3. 너가 데이터 분석하고 싶은 파일의 이름, 코디네이트 등 입력해
-4. 분석한 파일을 저장하거나 보고 싶은지 선택
+1. We carried out this project using Pycharm. In order to run this program, the user must install the pycham.
+2. Open the Run.py file in the PyCharm. 
+3. Write wafer or coordinates you want to analyze afterwards.
+4. Choose whether to save graph or show graph.
+5. The results of the analysis are in the results folder.
 
-만약 너가 제대로 쓰지 않는다면 우리는 정확한 파일을 줄 수 없어
+If you don't write down the file to analyze properly, we'll let you know with an error mark.
 
 ## Contributing
 ***
