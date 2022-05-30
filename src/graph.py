@@ -66,7 +66,7 @@ class grp():
         # end_time2 = time.time()
         # print(f'right fitting time : {end_time2 - start_time2}')
 
-        plt.title("IV analysis")
+        plt.title("IV analysis-Raw & Fit")
         plt.xlabel("Voltage [V]")
         plt.ylabel("Current [A]")
         plt.yscale('logit')
@@ -103,13 +103,13 @@ class grp():
 
         plt.xlabel('Wavelength[nm]')
         plt.ylabel('Transmissions[dB]')
-        plt.title('Transmission spectra - fitted')
+        plt.title('Transmission spectra - Raw & Fit')
         plt.legend(loc='best')
 
 
         plt.subplot(2, 3, 3)
         for k in range(len(self.wvl)-1):
-            plt.title("Fitting Function")
+            plt.title("Processed interference spectrum")
             plt.xlabel("Wavelength [nm]")
             plt.ylabel("Measured transmission [dB]")
             plt.plot(self.wvl[k], self.itst[k] - f1(self.wvl[k]), label = f'DCBias = {self.lgds[k]}V')
