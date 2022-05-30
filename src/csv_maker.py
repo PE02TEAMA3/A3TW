@@ -37,7 +37,6 @@ class csv():
         if rsq.IV_right_rsq(p,fit,a) <= 0.96:
             Error_code.append('3')
             Error_name.append('Rsq.right.Error')
-
         if len(Error_code) == 0 :
             Error_code.append('0')
             Error_name.append('No Error')
