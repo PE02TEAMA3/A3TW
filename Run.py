@@ -6,10 +6,10 @@ start = t.time()
 Lot_id = []
 
 '''Enter the Wafer_id of the file you want to find'''
-Wafer_id = [""]
+Wafer_id = ["D07"]
 
 '''Enter the matrix of files you want to find. ex) (0,0),(0,1)...'''
-xy_coord = [""]
+xy_coord = ["(0,2)"]
 
 '''Enter the maskset of the file you want to find'''
 Mask_set = []
