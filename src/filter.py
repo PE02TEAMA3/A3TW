@@ -40,7 +40,7 @@ for i in range(len(wafer)):
 
 fname = []
 dlst = []
-# def cmp(a,b,c,d,e):
+
 class cmp():
     def __init__(self,a,b,c,d,e):
         self.a = a
