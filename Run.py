@@ -1,51 +1,29 @@
-import sys
-import os
-# from src import filter
-# import filter
-from src import filter, parsing, graph, fitting
-import warnings
+from src import csv_maker, filter, graph, parsing, get_start,fitting, rsq
+import time as t
+start = t.time()
+'''Enter the Lot_id of the file you want to find'''
+Lot_id = ['']
 
+'''Enter the Wafer_id of the file you want to find'''
+Wafer_id = ['']
 
-'''찾고 싶은 파일의 Lot_id를 입력하세요.'''
-Lot_id = ['HY202103']
+'''Enter the matrix of files you want to find. ex) (0,0),(0,1)...'''
+xy_coord = ['']
 
-'''찾고 싶은 파일의 Wafer_id를 입력하세요.'''
-Wafer_id = ['D08']
+'''Enter the maskset of the file you want to find'''
+Mask_set = ['']
 
-'''찾고 싶은 파일의 행렬을 입력하세요. ex) [0,0]'''
-xy_coord = ['(0,0)']
-
-'''찾고 싶은 파일의 maskset을 입력하세요.'''
-Mask_set = ['LION1']
-
-'''찾고 싶은 파일의 devive_name을 입력하세요.'''
+'''Enter the devive_name of the file you want to find'''
 device_name =[]
 
-'''그래프를 저장하고 싶다면 True, 저장하고 싶지 않다면 False를 입력하세요.'''
-Opt_savefig = True
+'''Enter 'True' if you want to save the graph, 'False' otherwise'''
+Opt_savefig = False
 
-'''그래프를 보고 싶다면 True, 보고 싶지 않다면 False를 입력하세요.'''
+'''Enter 'True' if you want to see the graph, 'False' otherwise'''
 Opt_showfig = False
 
-
-filter.cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name)
-# print(str(filter.dlst[0]))
-for i in range(len(filter.dlst)):
-    warnings.filterwarnings('ignore')
-    a = parsing.v(filter.dlst[i])
-    b = parsing.i(filter.dlst[i])
-    c = parsing.wvl(filter.dlst[i])
-    d = parsing.itst(filter.dlst[i])
-    e = parsing.lgds(filter.dlst[i])
-    # s = str(filter.dlst[i])
-    f = graph.figname(str(filter.dlst[i]))
-    graph.grph(a,b,c,d,e,Opt_showfig,Opt_savefig,f)
-
-print('제시하신 파일을 모두 찾았습니다. 이용해 주셔서 감사합니다.')
-# print(a.pas())
-# print(parsing.i)
-# print(graph.v(filter.dlst))
-# print(c)
-# print(parsing.ps(c))
-# (parsing.ps(c))[1]
-
+a = filter.cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name)
+b = get_start.run2u(filter,parsing,graph,csv_maker,Opt_showfig,Opt_savefig,fitting,rsq)
+get_start.err(a,b)
+end = t.time()
+get_start.runtime(start,end)
