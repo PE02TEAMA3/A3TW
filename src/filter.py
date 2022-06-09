@@ -23,7 +23,6 @@ def findfile(name, path):
 
 #현재 파일의 경로를 찾아 dat경로로 위치 변경
 h = ((os.path.dirname(os.path.abspath(__file__))).replace("\\","/")).replace("src","dat")
-
 #wafer리스트
 wafer = []
 #data리스트

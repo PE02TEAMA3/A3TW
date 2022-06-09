@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from numpy import exp
 from lmfit import Model
 from sklearn.metrics import r2_score
 import os

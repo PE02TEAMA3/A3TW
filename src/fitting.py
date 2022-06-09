@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def eq(x, a, b, c, d, e):
     return a * (x**4) + b * (x**3) + c * (x**2) + d*x + e
 
