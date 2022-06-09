@@ -3,7 +3,6 @@ import os
 import xml.etree.ElementTree as ET
 
 h = ((os.path.dirname(os.path.abspath(__file__))).replace("\\","/")).replace("src","results/csvs")
-
 class csv():
     def __init__(self,a,g,p,data,rsq,fit):
         self.a = a

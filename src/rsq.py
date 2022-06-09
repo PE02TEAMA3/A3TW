@@ -2,6 +2,7 @@ import numpy as np
 from lmfit import Model
 from sklearn.metrics import r2_score
 
+
 def ref_rsq(p,d):
     dp1 = np.polyfit(p.wvl(d)[6], p.itst(d)[6], 4)
     f1 = np.poly1d(dp1)
