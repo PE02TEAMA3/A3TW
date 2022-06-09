@@ -1,4 +1,5 @@
 dat/**
+!dat/.gitkeep
 .idea/
 results/csvs/*.csv
 results/jpgs/*.jpg
