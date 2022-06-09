@@ -1,5 +1,4 @@
 import warnings
-import time as t
 
 def run2u(a,b,c,d,f,g,fit,rsq):
     print('Hello')
