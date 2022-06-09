@@ -18,7 +18,7 @@ Mask_set = ['']
 device_name =[]
 
 '''Enter 'True' if you want to save the graph, 'False' otherwise'''
-Opt_savefig = True
+Opt_savefig = False
 
 '''Enter 'True' if you want to see the graph, 'False' otherwise'''
 Opt_showfig = False
