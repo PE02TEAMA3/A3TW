@@ -3,16 +3,16 @@ import time as t
 start = t.time()
 
 '''Enter the Lot_id of the file you want to find'''
-Lot_id = []
+Lot_id = ['']
 
 '''Enter the Wafer_id of the file you want to find'''
-Wafer_id = []
+Wafer_id = ['']
 
 '''Enter the matrix of files you want to find. ex) (0,0),(0,1)...'''
-xy_coord = []
+xy_coord = ['']
 
 '''Enter the maskset of the file you want to find'''
-Mask_set = []
+Mask_set = ['']
 
 '''Enter the devive_name of the file you want to find'''
 device_name =[]

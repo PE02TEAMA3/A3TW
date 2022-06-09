@@ -51,6 +51,8 @@ class cmp():
         clst = [self.a, self.b, self.c, self.d, self.e]
         for hu in range(len(clst)-1):
             num(clst[hu])
+        if len(self.e) == 1 and self.e[0] == '':
+            del self.e[0]
         if len(self.e) == 0:
             self.e.append("LMZ")
         for fst in range(len(self.a)):
