@@ -41,6 +41,8 @@ If you want install all prerequisite, Write 'pip install -r requirements.txt'.
   * #### rsq.py - It is a file that calculates the r square values of IV and ref fitting functions.
 * #### .gitignore - We used the .gitignore file to prevent uploading files that the project does not need to manage or release.
 * #### Run.py - It is the code that executes the projects, and it receives several options to execute the src folder.
+* ### doc
+  * #### csv report.ipynb - It is a file that compares data values between wafers using Jupyter notebook. The code compares the values of ErrorFlag, Rsq of Ref. spectrum (Nth), Max transmission of Ref. spec. (dB), Rsq of Left IV, Rsq of right IV, I at-1V [A], and I at 1V [A] of each wafer.
 
 ## Usage
 ***

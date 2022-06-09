@@ -62,6 +62,6 @@ class all_csv():
         columns = ['Lot', 'Wafer', 'Mask', 'TestSite', 'Name', 'Date', 'Script Owner', 'Operator',
                    'Row', 'Column', 'ErrorFlag', 'Error description',
                    'Analysis Wavelength', 'Rsq of Ref. spectrum (Nth)', 'Max transmission of Ref. spec. (dB)',
-                   'Rsq of Left IV', 'Rsq of right IV', 'I at -1V [A]', 'I at 1V[A]']
+                   'Rsq of Left IV', 'Rsq of right IV', 'I at -1V [A]', 'I at 1V [A]']
         df = pd.DataFrame(self.a, columns=columns).set_index('Lot')
         df.to_csv(h+"/"+"AnalysisResult_A3"+".csv", mode= 'w')
