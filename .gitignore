@@ -1,3 +1,7 @@
-dat/
-idea/
-
+dat/**
+.idea/
+results/csvs/*.csv
+results/jpgs/*.jpg
+__pycache__/
+doc/.ipynb_checkpoints/
+results/wafer-to-wafer/*.jpg
