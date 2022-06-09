@@ -2,4 +2,6 @@ dat/**
 .idea/
 results/csvs/*.csv
 results/jpgs/*.jpg
+results/jpgs/*.png
 __pycache__/
+.ipynb_checkpoints/
