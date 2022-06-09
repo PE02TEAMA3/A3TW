@@ -1,7 +1,6 @@
 from src import csv_maker, filter, graph, parsing, get_start,fitting, rsq
 import time as t
 start = t.time()
-
 '''Enter the Lot_id of the file you want to find'''
 Lot_id = ['']
 
